@@ -1,0 +1,10 @@
+<div class="sorting-wrapper">
+    <app-search [ngModel]="searchByName" (ngModelChange)="onSearch($event)" name="externalVal" #validations="ngModel"></app-search>
+    <app-dropdown [ngModel]="selectedGenre" (ngModelChange)="onGenreFilter($event)" [options]="genresMock"></app-dropdown>
+</div>
+<div class="table-wrapper">
+    <app-custom-table
+    [data]="sortedList"
+    [pageSize]="5">
+</app-custom-table>
+</div>

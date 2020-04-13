@@ -1,0 +1,11 @@
+:host {
+    width: 100px;
+    margin: 10px;
+    
+}
+ mat-select {
+    background-color: orange;
+}
+ mat-label {
+    position: absolute;
+}

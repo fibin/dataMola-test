@@ -1,0 +1,28 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+body { 
+  font-family: Roboto, Arial, sans-serif;
+  margin: 0;
+}
+
+.basic-container {
+  padding: 30px;
+}
+
+.version-info {
+  font-size: 8pt;
+  float: right;
+}
+.mat-sort-header-arrow, [dir=rtl] .mat-sort-header-position-before .mat-sort-header-arrow
+{
+color: #ffffff;
+}
+.mat-paginator-container {
+  display: flex;
+  align-items: center;
+  /* justify-content: flex-end; */
+  justify-content: flex-start !important;
+  min-height: 56px;
+  padding: 0 8px;
+  width: 100%;
+}

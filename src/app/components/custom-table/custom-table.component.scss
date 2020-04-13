@@ -1,0 +1,35 @@
+
+:host {
+  background-color: #fffadb;
+  border: 1px solid;
+}
+table {
+  width: 500px;
+  ::ng-deep thead {
+    background-color: purple;
+    tr {
+      th {
+        color: white;
+      }
+    }
+  }
+  ::ng-deep tbody {
+    tr {
+      td {
+        font-weight: 600;;
+      }
+    }
+  }
+}
+
+.genre-wrapper {
+  display: block;
+  span {
+    border-radius: 25px;
+    margin: 5px;
+    color: white;
+    padding: 2px;
+    background-color: red;
+    font-weight: 100;
+  }
+}

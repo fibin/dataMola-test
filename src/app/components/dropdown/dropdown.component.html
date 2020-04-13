@@ -1,0 +1,5 @@
+<mat-label *ngIf="!val">Genre</mat-label>
+<mat-select [(ngModel)]="value" class="form-control" >
+    <mat-option [value]="null">--select--</mat-option>
+    <mat-option *ngFor="let option of options" [value]="option.name">{{option.name}}</mat-option>
+  </mat-select>

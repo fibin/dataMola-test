@@ -1,0 +1,28 @@
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef>Name</th>
+    <td mat-cell *matCellDef="let series">{{ series.name }}
+      <div class="genre-wrapper">
+        <span *ngFor="let genre of series.genre">{{genre}}</span>
+      </div>
+      
+    </td>
+  </ng-container>
+  <ng-container matColumnDef="season">
+    <th mat-header-cell *matHeaderCellDef>Season</th>
+    <td mat-cell *matCellDef="let series">{{ series.season }}</td>
+  </ng-container>
+  <ng-container matColumnDef="network">
+    <th mat-header-cell *matHeaderCellDef>Network</th>
+    <td mat-cell *matCellDef="let series">{{ series.network }}</td>
+  </ng-container>
+  <ng-container matColumnDef="premiere">
+    <th mat-header-cell *matHeaderCellDef>Premiere</th>
+    <td mat-cell *matCellDef="let series">{{ series.premiere | date:'shortDate' }}</td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  
+</table>
+<mat-paginator [pageSize]="pageSize" [pageSizeOptions]="[5, 10, 20]" ></mat-paginator>
